@@ -49,24 +49,17 @@ class ModelTrainer:
             }
             
             
-             params={
+            params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
                     # 'splitter':['best','random'],
                     # 'max_features':['sqrt','log2'],
                 },
                 "Random Forest":{
-                    'n_estimators': [50, 100, 200],
-                    'max_depth': [5, 10, 15],
-                    'min_samples_split': [2, 5, 10],
-                    'min_samples_leaf': [1, 5, 10],
-                    'feature_importances': [True, False],
-                    'random_state': [42],
-                    'max_features': ['auto', 10, 20],
-                    'min_variance': [0.01, 0.1, 1],
-                    'tolerance': [0.01, 0.1],
-                    'cv': ['kfold', 'leaveoneout'],
-                    'scoring': ['neg_mean_squared_error']
+                    # 'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                 
+                    # 'max_features':['sqrt','log2',None],
+                    'n_estimators': [8,16,32,64,128,256]
                 },
                 "Gradient Boosting":{
                     # 'loss':['squared_error', 'huber', 'absolute_error', 'quantile'],
